@@ -29,11 +29,11 @@ def create_ical(cal_id, cal_garbage_type, cal_date_start, cal_date_end, cal_date
             "SUMMARY:"+cal_garbage_type + "\r\n" \
             "DESCRIPTION:"+cal_garbage_type + "\r\n" \
             "CLASS:PUBLIC\r\n" \
-            "DTSTART:" + datetime.strftime(cal_date_start,"%Y%m%dT%H%M%SZ") + "\r\n" \
-            "DTEND:" + datetime.strftime(cal_date_end,"%Y%m%dT%H%M%SZ") + "\r\n" \
+            "DTSTART;VALUE=DATE:" + datetime.strftime(cal_date_start,"%Y%m%d") + "\r\n" \
+            "DTEND;VALUE=DATE:" + datetime.strftime(cal_date_end,"%Y%m%d") + "\r\n" \
             "DTSTAMP:" + datetime.strftime(cal_date_created,"%Y%m%dT%H%M%SZ") + "\r\n" \
             "END:VEVENT\r\n\r\n"  \
-    
+   
 
 def multipleReplace(text, wordDict):
     """
@@ -78,6 +78,3 @@ for item in data:
             f.write(ical)
 f.write("END:VCALENDAR")
 f.close()
-
-
-
