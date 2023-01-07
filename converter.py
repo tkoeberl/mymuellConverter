@@ -1,3 +1,4 @@
+# coding=utf-8
 import urllib.request as urllib
 import json
 from datetime import datetime,timedelta
