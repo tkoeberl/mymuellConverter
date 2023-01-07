@@ -6,13 +6,13 @@ import re
 
 output="/tmp/muell.ics"
 idx="termins"
-city_id="71179"
-area_id="71179"
+city_id="71186"
+area_id="71186"
 #alert_lead_time_sec=21600
 alert_length_time_sec=3600
 url = "https://mymuell.jumomind.com/webservice.php?idx="+idx+"&city_id="+city_id+"&area_id="+area_id
 #import_garbage_type=["EICH_BIO", "LK_EICH_PAP", "LK_EICH_REST", "LK_EICH_GELB3","LK_EICH_GELB2","LK_EICH_GELB1"]
-import_garbage_type=["EICH_BIO", "LK_EICH_PAP", "LK_EICH_REST", "LK_EICH_GELB3"]
+import_garbage_type=["EICH_BIO", "LK_EICH_PAP", "LK_EICH_REST", "LK_EICH_GELB2"]
 import_translation = {
 'EICH_BIO': 'Grünzeug',
 'LK_EICH_PAP': 'Pappzeug',
